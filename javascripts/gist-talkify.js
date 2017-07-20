@@ -31,7 +31,6 @@ jQuery(document).ready(function() {
     
     function render(content) {
         $('div#code').text(content);
-        $('div#code-overlay').hide();
         // copy code bg color to body bg
         $('body').css('background', $('div#code').css('background'));
     }
@@ -53,7 +52,7 @@ jQuery(document).ready(function() {
     	var playlist = new talkify.playlist()
     		.begin()
     		.usingPlayer(player)
-        .withRootSelector('#root')
+        .withRootSelector('#code')
         .withTextInteraction()
         .build()
         .play();
