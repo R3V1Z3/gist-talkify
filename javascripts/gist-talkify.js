@@ -41,7 +41,6 @@ jQuery(document).ready(function() {
         var sanitizedHtml = parser.sanitizeString(content);
         // add imported css to head
         $('head').append('<style>' + sanitizedHtml + '</style>');
-        $('#canvas').hide();
 	play();
     }
 
