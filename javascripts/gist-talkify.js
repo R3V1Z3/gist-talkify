@@ -43,11 +43,14 @@ jQuery(document).ready(function() {
         // add imported css to head
         $('head').append('<style>' + sanitizedHtml + '</style>');
         $('#canvas').hide();
-        
-		var player = new talkify.TtsPlayer()
-    		.enableTextHighlighting();
+	play();
+    }
 
-    var playlist = new talkify.playlist()
+    function play(){
+	var player = new talkify.TtsPlayer()
+    	.enableTextHighlighting();
+
+    	var playlist = new talkify.playlist()
     		.begin()
     		.usingPlayer(player)
         .withRootSelector('#root')
