@@ -1,3 +1,10 @@
+talkify.config.host = 'http://talkify.net';
+
+talkify.config.ui.audioControls = {
+  enabled: true, //<-- Disable to get the browser built in audio controls
+  container: document.getElementById("player-and-voices")
+};
+
 jQuery(document).ready(function() {
 
     // from here: http://stackoverflow.com/questions/11582512/how-to-get-url-parameters-with-javascript/11582513#11582513
@@ -36,6 +43,17 @@ jQuery(document).ready(function() {
         // add imported css to head
         $('head').append('<style>' + sanitizedHtml + '</style>');
         $('#canvas').hide();
+        
+		var player = new talkify.TtsPlayer()
+    		.enableTextHighlighting();
+
+    var playlist = new talkify.playlist()
+    		.begin()
+    		.usingPlayer(player)
+        .withRootSelector('#root')
+        .withTextInteraction()
+        .build()
+        .play();
     }
 
     // http://stackoverflow.com/questions/9005572/pull-in-json-data/10454873#10454873
