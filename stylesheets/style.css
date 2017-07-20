@@ -1,0 +1,130 @@
+@import 'https://fonts.googleapis.com/css?family=Share+Tech+Mono';
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+a {
+  color: #00f;
+  text-decoration: none;
+}
+
+a:hover {
+  background: #eee;
+}
+
+html {
+  height: auto;
+}
+
+body {
+  font-size: 150%;
+  min-height: 100%;
+  height: 100%;
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+#canvas {
+  display: none;
+}
+
+#info {
+  font-size: 16px;
+}
+
+#info .param {
+  background-color: #eee;
+}
+
+#inner {
+  width: 60%;
+  top: 50%;
+  left: 50%;
+  margin: 0 auto;
+  padding-top: 100px;
+  -webkit-transform: perspective( 370px ) rotateX( 3deg )rotateY( 2deg ) skew(0deg, 2deg);
+}
+
+.dark-form {
+  max-width: 800px;
+  background: #999;
+  padding: 20px 30px 20px 30px;
+  font: 24px;
+  color: #D3D3D3;
+  text-shadow: 1px 1px 1px #444;
+  border: none;
+  border-radius: 5px;
+}
+
+.dark-form .info {
+  border-radius: 50%;
+  background-color: #666;
+  color: #ccc;
+  height: 10px;
+  width: 20px;
+  font-size: 16px;
+  padding: 0 4px;
+  margin: 0 0 0 4px;
+  vertical-align: text-top;
+}
+
+.dark-form .info:hover {
+  background-color: #ccc;
+  color: #666;
+}
+
+.dark-form label {
+  display: block;
+  margin: 0px 0px 5px;
+}
+
+.dark-form label>span {
+  float: left;
+  width: 20%;
+  text-align: right;
+  padding-right: 10px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.dark-form input[type="text"],
+.dark-form input[type="email"],
+.dark-form textarea,
+.dark-form select {
+  border: none;
+  color: #525252;
+  height: 25px;
+  line-height: 15px;
+  margin-bottom: 16px;
+  margin-right: 6px;
+  margin-top: 2px;
+  outline: 0 none;
+  padding: 5px 0px 5px 5px;
+  width: 70%;
+  border-radius: 5px;
+  background: #DFDFDF;
+}
+
+.dark-form select {
+  height: 40px;
+}
+
+.dark-form .button {
+  border: none;
+  padding: 10px 25px 10px 25px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 1px #3D3D3D;
+  color: #333;
+  background-color: #EBEBEB;
+}
+
+.dark-form .button:hover {
+  color: #999;
+  background: #111;
+}
