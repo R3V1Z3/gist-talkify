@@ -30,7 +30,7 @@ jQuery(document).ready(function() {
     var cssfilename = getURLParameter('cssfilename');
     
     function render(content) {
-        $('div#code').text(content);
+        $('div#code').text('<p>' + content + '</p>');
         // copy code bg color to body bg
         $('body').css('background', $('div#code').css('background'));
     }
