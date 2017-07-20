@@ -18,29 +18,13 @@ jQuery(document).ready(function() {
     $('link[rel=stylesheet]').remove();
     var filename = getURLParameter('filename');
 
-    // get highlight.js style if provided
-    var style = getURLParameter('style');
-    if (!style) style = 'default';
-
     // get css parameters
     var css = getURLParameter('css');
     if (!css) css = '3df562d921295d88564e24b828c0b8b6';
     var cssfilename = getURLParameter('cssfilename');
-
-    // add style reference to head to load it
-    $('head').append('<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/' + style.replace(/[^a-zA-Z0-9-_]+/ig, '') + '.min.css">');
-
+    
     function render(content) {
-        // syntax highlight code
         $('div#code').text(content);
-        $('div#code').each(function(i, block) {
-            hljs.highlightBlock(block);
-        });
-        // #code-overlay also, then hide it, user can unhide if needed
-        $('div#code-overlay').text(content);
-        $('div#code-overlay').each(function(i, block) {
-            hljs.highlightBlock(block);
-        });
         $('div#code-overlay').hide();
         // copy code bg color to body bg
         $('body').css('background', $('div#code').css('background'));
@@ -52,9 +36,6 @@ jQuery(document).ready(function() {
         var sanitizedHtml = parser.sanitizeString(content);
         // add imported css to head
         $('head').append('<style>' + sanitizedHtml + '</style>');
-        // make inner div draggable and give it move pointer
-        $('#inner').draggable();
-        $('#inner').css('cursor', 'move');
         $('#canvas').hide();
     }
 
