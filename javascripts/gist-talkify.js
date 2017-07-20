@@ -1,4 +1,3 @@
-hljs.initHighlightingOnLoad();
 jQuery(document).ready(function() {
 
     // from here: http://stackoverflow.com/questions/11582512/how-to-get-url-parameters-with-javascript/11582513#11582513
