@@ -64,8 +64,8 @@ body {
 
 .dark-form .info {
   border-radius: 50%;
-  background-color: #fff;
-  color: #5faadd;
+  background-color: #5faadd;
+  color: #fff;
   height: 10px;
   width: 20px;
   font-size: 16px;
@@ -75,8 +75,8 @@ body {
 }
 
 .dark-form .info:hover {
-  background-color: #5faadd;
-  color: #fff;
+  background-color: #fff;
+  color: #5faadd;
 }
 
 .dark-form label {
