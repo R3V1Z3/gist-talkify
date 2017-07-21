@@ -47,16 +47,15 @@ jQuery(document).ready(function() {
     }
 
     function play(){
-	var player = new talkify.TtsPlayer()
-    	.enableTextHighlighting();
+	var player = new talkify.TtsPlayer().enableTextHighlighting();
 
     	var playlist = new talkify.playlist()
-    		.begin()
-    		.usingPlayer(player)
-        .withRootSelector('#code')
-        .withTextInteraction()
-        .build()
-        .play();
+		.begin()
+		.usingPlayer(player)
+		.withRootSelector('#code')
+		.withTextInteraction()
+		.build()
+		.play();
     }
 
     // http://stackoverflow.com/questions/9005572/pull-in-json-data/10454873#10454873
