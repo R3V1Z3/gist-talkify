@@ -35,6 +35,7 @@ jQuery(document).ready(function() {
         //$('div#code').html('<p>' + content + '</p>');
         // copy code bg color to body bg
         $('body').css('background', $('div#code').css('background'));
+	play();
     }
 
     function rendercss(content) {
@@ -43,11 +44,11 @@ jQuery(document).ready(function() {
         var sanitizedHtml = parser.sanitizeString(content);
         // add imported css to head
         $('head').append('<style>' + sanitizedHtml + '</style>');
-	play();
     }
 
     function play(){
-	var player = new talkify.TtsPlayer().enableTextHighlighting();
+	var player = new talkify.TtsPlayer();
+	player.enableTextHighlighting();
 
     	var playlist = new talkify.playlist()
 		.begin()
